@@ -1,4 +1,4 @@
-package com.kodilla.transfersgateway.controller.request;
+package com.kodilla.transfersgateway.domain;
 
 import lombok.Data;
 

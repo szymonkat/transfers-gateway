@@ -1,6 +1,7 @@
 package com.kodilla.transfersgateway.controller;
 
 import com.kodilla.commons.Transfer;
+import com.kodilla.transfersgateway.domain.TransferRequest;
 import com.kodilla.transfersgateway.service.TransferProducer;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -18,7 +19,7 @@ public class TransferController {
     private final TransferProducer transferProducer;
 
     @PostMapping
-    public void saveTransfer(@RequestBody com.kodilla.transfersgateway.controller.request.TransferRequest request) {
+    public void saveTransfer(@RequestBody TransferRequest request) {
         log.info("Received transfer request: {}", request);
         Transfer transfer = new Transfer();
         transfer.setAmount(request.getAmount());
